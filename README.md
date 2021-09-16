@@ -1,6 +1,7 @@
-# 004-elixir-pagination-with-scrivener (Sept 2021)
+# 005-versioned-api-with-phoenix (Sept 2021)
 ### Reference
-https://elixircasts.io/elixir-pagination-with-scrivener
+https://elixircasts.io/versioned-api-with-phoenix
+
 ### Using
   * Erlang 24.0
   * Elixir 1.12.3  
@@ -8,11 +9,7 @@ https://elixircasts.io/elixir-pagination-with-scrivener
   * Pheonix 1.5.12
 
 ### What I learnt
-  https://github.com/drewolson/scrivener_ecto
-  * Put the project dependencies to `deps` in `mix.exs`
-  * Run `mix deps.get` to install those dependencies
-  * Set `use Scrivener, page_size: 4` with default page size in `lib/teacher/repo.ex`
-
-### Notes for the latest version of phoenix
-  * No need to specify the dependenies in `application` anymore
-  * `scrivener_html` does not support the latest phoenix 1.5.x version
+  * There are two components for routing help function and routing:
+    - `as: :api` to set the helper prefix
+    - `scope` to set the actual routing, namespace and affect the file structure
+  * `mix phx.gen.json` to generate JSON output

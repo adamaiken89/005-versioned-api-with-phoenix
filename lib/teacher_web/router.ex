@@ -23,9 +23,13 @@ defmodule TeacherWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TeacherWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", TeacherWeb, as: :api do
+    pipe_through :api
+
+    scope "/v1", Api.V1, as: :v1 do
+      resources "/posts", PostController, only: [:index]
+    end
+  end
 
   # Enables LiveDashboard only for development
   #
